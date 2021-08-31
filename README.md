@@ -1,5 +1,7 @@
 # Naive # Eval
 
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/NaiveSharpEval?label=NuGet&logo=nuget)](https://www.nuget.org/packages/NaiveSharpEval/)
+
 This package is only to test something. It synchronously evaluates C# or F# code and returns the string output if succeeded.
 
 ## Examples
