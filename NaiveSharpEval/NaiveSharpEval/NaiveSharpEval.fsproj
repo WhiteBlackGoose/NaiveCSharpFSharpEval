@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Authors>WhiteBlackGoose</Authors>
+    <Company />
+    <Description>Naive evaluator for C# and F# code based on dotnet/interactive</Description>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/WhiteBlackGoose/NaiveCSharpFSharpEval</RepositoryUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
