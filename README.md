@@ -1,5 +1,8 @@
-# NaiveCSharpFSharpEval
-This package is only to test something. It synchronously evaluates C# or F# code and returns the string output.
+# Naive # Eval
+
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/NaiveSharpEval?label=NuGet&logo=nuget)](https://www.nuget.org/packages/NaiveSharpEval/)
+
+This package is only to test something. It synchronously evaluates C# or F# code and returns the string output if succeeded.
 
 ## Examples
 
@@ -7,26 +10,32 @@ This package is only to test something. It synchronously evaluates C# or F# code
 
 ```cs
 if (NaiveSharpEval.Executor.ExecuteCSharp("(double)(1 + 2)", out var res))
-  Console.WriteLine(res);
+    Console.WriteLine(res);
+else
+    Console.WriteLine("Error!");
 ```
 
 ### Call F# from C#
 
 ```cs
 if (NaiveSharpEval.Executor.ExecuteFSharp("(+) 1 2", out var res))
-  Console.WriteLine(res);
+    Console.WriteLine(res);
+else
+    Console.WriteLine("Error!");
 ```
 
 ### Call C# from F#
 
 ```fs
-open NaiveSharpEval
-let (success, result) = Executor.ExecuteCSharp "(double)(1 + 2)"
+match NaiveSharpEval.Executor.ExecuteCSharp "(double)(1 + 2)" with
+| (true, res) -> printfn "%s" res
+| _ -> printfn "%s" "Error!"
 ```
 
 ### Call F# from F#
 
 ```fs
-open NaiveSharpEval
-let (success, result) = Executor.ExecuteFSharp "(+) 1 2"
+match NaiveSharpEval.Executor.ExecuteFSharp "(+) 1 2" with
+| (true, res) -> printfn "%s" res
+| _ -> printfn "%s" "Error!"
 ```
