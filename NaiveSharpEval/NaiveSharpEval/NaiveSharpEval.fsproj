@@ -9,6 +9,8 @@
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/WhiteBlackGoose/NaiveCSharpFSharpEval</RepositoryUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -18,6 +20,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.DotNet.Interactive.CSharp" Version="1.0.0-beta.21330.2" />
     <PackageReference Include="Microsoft.DotNet.Interactive.FSharp" Version="1.0.0-beta.21330.2" />
+    <PackageReference Include="FSharp.Core" Version="5.0.2-beta.21310.3" />
   </ItemGroup>
 
 </Project>
